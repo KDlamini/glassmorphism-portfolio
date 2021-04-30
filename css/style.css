@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(70, 69, 69);
+}
+
+.container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.navbar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    z-index: 1;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 60%;
+    padding: 20px;
+    background: rgba( 53, 50, 50, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.0px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.nav-list .icon {
+    color: rgb(0, 195, 255);
+}
+
+.nav-list .btn {
+    margin: 20px 0px;
+    padding: 15px;
+}
+
+.nav-list .btn, .about-banner,
+.social a, .banner,
+.project-card, #contact-form form,
+.profile-img, .about-img {
+    background: rgba( 48, 45, 45, 0.50 );
+    box-shadow: 0 -15px 15px rgba(0, 195, 255, 0.05),
+                inset 0 -15px 15px rgba(0, 195, 255, 0.05),  
+                0 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0 15px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur( 10.0px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.1 );
+}
+
+.nav-list .btn:hover,
+.project-buttons button:hover,
+.social a:hover, .cv-btn:hover {
+    cursor: pointer;
+    border: 1px solid rgba(48, 45, 45, 0.5);
+    box-shadow: -7px -7px 20px 0 rgba(103, 228, 245, 0.6) , 
+                7px 7px 20px 0 rgba(85, 125, 233, 0.4);
+}
+
+.nav-list .btn:hover .icon {
+    color: #86df00;
+}
+
+.nav-list .btn:active,
+.contact-right button:active,
+.project-buttons button:active,
+.social a:active, .cv-btn:active{
+	transform: scale(1.04);
+	transition: all ease 0.01s;
+}
+
+.all-pages {
+    flex: 12;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.page {
+    width: 90vw;
+    padding: 20px;
+    margin: 5px 5px 5px 95px;
+    background: rgba( 53, 50, 50, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.0px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .page {
+        margin-left: 80px;
+    }
+
+    .nav-list {
+        width: 14vw;
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .page {
+        margin-left: 60px;
+    }
+
+    .nav-list {
+        width: 15vw;
+    }
+
+    .nav-list .btn {
+        margin: 20px 0px;
+        padding: 10px;
+    }    
+}
